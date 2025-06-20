@@ -1,3 +1,29 @@
+local renv = getrenv();
+local genv = getgenv();
+
+--local pi = renv.math.pi;
+--local huge = renv.math.huge;
+
+local _assert = clonefunction(assert);
+local _color3new = clonefunction(Color3.new);
+local _instancenew = clonefunction(Instance.new);
+local _mathatan2 = clonefunction(math.atan2);
+local _mathclamp = clonefunction(math.clamp);
+local _mathmax = clonefunction(math.max);
+local _setmetatable = clonefunction(setmetatable);
+local _stringformat = clonefunction(string.format);
+local _typeof = clonefunction(typeof);
+local _taskspawn = clonefunction(task.spawn);
+local _udimnew = clonefunction(UDim.new);
+local _udim2fromoffset = clonefunction(UDim2.fromOffset);
+local _udim2new = clonefunction(UDim2.new);
+local _vector2new = clonefunction(Vector2.new);
+
+local _destroy = clonefunction(game.Destroy);
+local _gettextboundsasync = clonefunction(textService.GetTextBoundsAsync);
+
+local _httpget = clonefunction(game.HttpGet);
+local _writecustomasset = writecustomasset and clonefunction(writecustomasset);
 local drawing = {
     Fonts = {
         UI = 0,
