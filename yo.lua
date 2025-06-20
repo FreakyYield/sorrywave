@@ -6,6 +6,21 @@ local drawing = {
         Monospace = 3
     }
 };
+local function create(className, properties, children)
+	local inst = _instancenew(className);
+	for i, v in properties do
+		if i ~= "Parent" then
+			inst[i] = v;
+		end
+	end
+	if children then
+		for i, v in children do
+			v.Parent = inst;
+		end
+	end
+	inst.Parent = properties.Parent;
+	return inst;
+end
 do
     local drawingDirectory = create("ScreenGui", {
         DisplayOrder = 15,
